@@ -33,20 +33,20 @@ namespace SulfuricAcidElectrolysis
             newVitriolRec.Name = "精炼油（高效）";
             newVitriolRec.name = Localization.CurrentLanguage.lcId switch
             {
-				Localization.LCID_ZHCN => "精炼油（高效）",
-				Localization.LCID_ENUS => "refined oil(efficient)",
+                Localization.LCID_ZHCN => "精炼油（高效）",
+                Localization.LCID_ENUS => "refined oil(efficient)",
                 Localization.LCID_FRFR => "Huile raffinée(haute efficacité)",
                 _ => "精炼油（高效）",
             };
             newVitriolRec.Description = "找到硫酸海，制造精炼油就会变得容易许多。";
             newVitriolRec.description = Localization.CurrentLanguage.lcId switch
-			{
-				Localization.LCID_ZHCN => "找到硫酸海，制造精炼油就会变得容易许多。",
-				Localization.LCID_ENUS => "It will be a lot easier to produce refined oil if you can find a sea of sulfuric acid",
-				Localization.LCID_FRFR => "Trouver une mer d'acide sulfurique facilite la fabrication d'huile raffinée.",
-				_ => "找到硫酸海，制造精炼油就会变得容易许多。",
-			};
-			newVitriolRec.Items = new int[] { 1116 };
+            {
+                Localization.LCID_ZHCN => "找到硫酸海，制造精炼油就会变得容易许多。",
+                Localization.LCID_ENUS => "It will be a lot easier to produce refined oil if you can find a sea of sulfuric acid",
+                Localization.LCID_FRFR => "Trouver une mer d'acide sulfurique facilite la fabrication d'huile raffinée.",
+                _ => "找到硫酸海，制造精炼油就会变得容易许多。",
+            };
+            newVitriolRec.Items = new int[] { 1116 };
             newVitriolRec.Results = new int[] { 1114, 1000 };
             newVitriolRec.ItemCounts = new int[] { 4 };
             newVitriolRec.ResultCounts = new int[] { 6, 4 };
@@ -59,10 +59,9 @@ namespace SulfuricAcidElectrolysis
 
             var RefinedOil = LDB.items.Select(1114);
             RefinedOil.recipes.Add(newVitriolRec);
-
-			LDBTool.PostAddProto(newVitriolRec);
-
-		}
+            
+            LDBTool.PostAddProto(newVitriolRec);
+        }
 
     }
 }
